@@ -58,7 +58,7 @@ function Header() {
                         </li>
                     </ul>
 
-                    <form className='form-search' >
+                    <form className="d-flex" role="search">
                         <SearchTwoToneIcon fontSize='large'/>
                         <input className='form-control' type="search" placeholder="Search" />
                         <button className="btn btn-primary" type="submit">Search</button>
