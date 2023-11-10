@@ -1,20 +1,21 @@
-import data from './data';
-import Cards from './Cards';
+import React from 'react'
+import Cards from './Cards'
+import data from './data'
 
 
 function CardList() {
     const cards = data.map(items => {
-      return (     
-          <Cards key={items.id} items={items} />     
-      )
+        return(
+            <Cards key={items.id} items={items}/>
+        )
     })
     return (
-      <div>       
-        <div className='divCards'>
-          {cards}
+        <div>
+            <div className='divCards'>
+            {cards}
+            </div>
         </div>
-      </div>
-    );
-  }
-  
-  export default CardList;
+    )
+}
+
+export default CardList
