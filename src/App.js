@@ -1,13 +1,17 @@
 
 import './App.css';
-import 'bulma/css/bulma.css'
-import Header from './componentes/header/Header';
+import CardList from './componentes/body/CardList';
+import Header from './componentes/header/Header'
+
+
+
 
 function App() {
+
   return (
-    <div>      
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-    <Header />        
+    <div>
+      <Header />
+      <CardList />
     </div>
   );
 }

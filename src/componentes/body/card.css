@@ -1,0 +1,39 @@
+img {
+    border-radius: 9px;
+    width: 90%;
+    /* para centrar la imagen en el div */
+    margin: auto;
+    display: block;
+}
+
+.card2 {
+    /* border: solid 2px blue; */
+    padding: 1%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    height: max-content;
+    margin: 5px;
+    width: 19%;
+}
+
+.divCards {
+    /* border: solid 2px green; */
+    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+    display: flex;
+    margin: 2%;
+    padding: 2%;
+    flex-flow: row wrap;
+}
+
+.card2 h5 {
+    text-align: center;
+}
+
+.card2 p {
+    text-align: justify;
+}
+
+.card2 button {
+    margin-left: 50%;    /* Para centrar el botón */
+    transform: translateX(-50%);/* Para centrar el botón */
+    
+}
