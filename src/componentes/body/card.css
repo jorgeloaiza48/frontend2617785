@@ -3,8 +3,7 @@
     display: flex;
     margin: 2%;
     padding: 2%;
-    flex-flow: row wrap;
-    
+    flex-flow: row wrap;    
 }
 .card2{
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
@@ -14,11 +13,14 @@
     margin: 5px;
     width: 19%;
 }
+.card2:hover{
+    transform: scale(1.2);
+}
 img{
     border-radius: 9px;
     width: 90%;
     margin: auto;
-    display: block;
+    display: block;    
 }
 .card2 h5{
     text-align: center;
@@ -27,6 +29,7 @@ img{
     text-align: justify;
 }
 .card2 button{
+    /* para centrar el botón */
     margin-left: 50%;
     transform: translateX(-50%);
 }
