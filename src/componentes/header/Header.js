@@ -8,6 +8,7 @@ import ConnectWithoutContactOutlinedIcon from '@mui/icons-material/ConnectWithou
 import HowToRegOutlinedIcon from '@mui/icons-material/HowToRegOutlined';
 import SearchTwoToneIcon from '@mui/icons-material/SearchTwoTone';
 import LoginIcon from '@mui/icons-material/Login';
+import { Link } from 'react-router-dom';
 
 
 function Header() {
@@ -44,12 +45,14 @@ function Header() {
                                 Contacto
                             </a>
                         </li>
-                        <li className="nav-item">
-                            <HowToRegOutlinedIcon />
-                            <a className="nav-link" href="#">
-                                Registrase
-                            </a>
-                        </li>
+                        <Link to='/registro'>
+                            <li className="nav-item">
+                                <HowToRegOutlinedIcon />
+                                <a className="nav-link" href="#">
+                                    Registrase
+                                </a>
+                            </li>
+                        </Link>
                         <li className="nav-item">
                             <LoginIcon />
                             <a className="nav-link" href="#">

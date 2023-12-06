@@ -1,17 +1,21 @@
 
 import './App.css';
-import CardList from './componentes/body/CardList';
-import Header from './componentes/header/Header'
-import Footer from './componentes/footer/Footer';
+import Inicio from './componentes/Inicio';
+import { Routes, Route, HashRouter } from "react-router-dom";
+import NotFound from './componentes/NotFound';
+import Registro from './componentes/Registro';
 
 function App() {
 
   return (
-    <div>
-      <Header />
-      <CardList />
-      <Footer/>
-    </div>
+    // El HasRouter es para que cargue correctamente las vista según la ruta https://www.youtube.com/watch?v=bv2pdxqVqBc
+    <HashRouter>
+      <Routes>
+        <Route exact path='/'         element={<Inicio />} />
+        <Route exact path='/registro' element={<Registro />} />
+        <Route path="*"               element={<NotFound />} />
+      </Routes>
+    </HashRouter>
   );
 }
 
