@@ -164,25 +164,5 @@ export default [
         description: "Cosmos trata de la ciencia en su contexto humano más amplio y explica cómo la ciencia y la civilización se desarrollan conjuntamente.",        
         image: miPortada,
         precio:"$25000"
-    },
-
-    {
-        id:13,
-        title: "El poder de las palabras",
-        autor: "Sigman Mariano",
-        fechaLanzamiento:"20-12-1989",
-        description: "Cosmos trata de la ciencia en su contexto humano más amplio y explica cómo la ciencia y la civilización se desarrollan conjuntamente.",        
-        image: poderPalabras,
-        precio:"$25000"
-    },
-
-    {
-        id:14,
-        title: "El poder de las palabras",
-        autor: "Sigman Mariano",
-        fechaLanzamiento:"20-12-1989",
-        description: "Cosmos trata de la ciencia en su contexto humano más amplio y explica cómo la ciencia y la civilización se desarrollan conjuntamente.",        
-        image: poderPalabras,
-        precio:"$25000"
     }
 ]
