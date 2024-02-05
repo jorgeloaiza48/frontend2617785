@@ -5,7 +5,7 @@ import React, { useState } from 'react'
 
 export default function Registro() {
 
-    let usuarios = []
+
 
     const [values, setValues] = useState({
         nombres: "",
@@ -25,11 +25,24 @@ export default function Registro() {
     }
     const handleSubmit = (e) => {
         e.preventDefault()
-        usuarios.push(values)
-        console.log("ùltimos Valores ", values)
-        console.log("Usuarios ", usuarios)
-        // const file = new Blob([values], { type: 'text/plain;charset=utf-8' });
-        // saveAs(file, 'hello_world.json');
+        fetch('http://localhost:3001/registro-usuario', {
+            method: 'PUT',
+            headers: { "Content-Type": "application/json", 'Accept': 'application/json' },
+            body: JSON.stringify(values)
+        })
+            .then(response => {
+                if (response.status === 200) {
+                    alert("Usuario creado con éxito")
+                }
+                else {
+                    alert("No fue posible crear el usuario "+ response.status)
+                  
+                }
+            })
+            .catch((error) => {
+                alert("No fue posible finalizar el proceso de registro por un error "+ error)
+            })
+
 
 
     }
