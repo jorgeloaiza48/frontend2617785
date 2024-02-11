@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
     res.send(userJSON)
 })
 
-app.put('/registro-usuario', function (req, res) {
+app.post('/registro-usuario', function (req, res) {
     
     let ultimo = users.length
     let usuarioNuevo = {
@@ -28,7 +28,8 @@ app.put('/registro-usuario', function (req, res) {
         nombres: req.body.nombres,
         apellidos: req.body.apellidos,
         email: req.body.email,
-        password: req.body.password
+        password: req.body.password,
+        fecha_creación: new Date()
     }
 
     let userNuevo
@@ -38,6 +39,8 @@ app.put('/registro-usuario', function (req, res) {
     userNuevo.push(usuarioNuevo)
     let userAux = JSON.stringify(userNuevo, null, "\t")
     fs.writeFileSync(userFilePath, userAux)
+
+    res.redirect('/')
 
 })
 

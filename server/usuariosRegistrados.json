@@ -1,17 +1,3 @@
 [
-	{
-		"id": 1,
-		"nombre": "hola lunes de febrero"
-	},
-	{
-		"id": 2,
-		"nombre": "hola lunes de febrero"
-	},
-	{
-		"id": 3,
-		"nombres": "",
-		"apellidos": "",
-		"email": "",
-		"password": ""
-	}
+	
 ]

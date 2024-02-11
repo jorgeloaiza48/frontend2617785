@@ -26,8 +26,8 @@ export default function Registro() {
     const handleSubmit = (e) => {
         e.preventDefault()
         fetch('http://localhost:3001/registro-usuario', {
-            method: 'PUT',
-            headers: { "Content-Type": "application/json", 'Accept': 'application/json' },
+            method: 'POST',
+            headers: { "Content-Type": "application/json", 'Accept': 'application/json' },           
             body: JSON.stringify(values)
         })
             .then(response => {
@@ -35,12 +35,12 @@ export default function Registro() {
                     alert("Usuario creado con éxito")
                 }
                 else {
-                    alert("No fue posible crear el usuario "+ response.status)
-                  
+                    alert("No fue posible crear el usuario " + response.status)
+
                 }
             })
             .catch((error) => {
-                alert("No fue posible finalizar el proceso de registro por un error "+ error)
+                alert("No fue posible finalizar el proceso de registro por un error " + error)
             })
 
 
@@ -71,7 +71,7 @@ export default function Registro() {
                                     </div>
                                     <div className="form-outline mb-4">
                                         <label className="form-label" htmlFor="form3Example1cg">Apellido</label>
-                                        <input type="text" id="form3Example1cg" className="form-control form-control-lg" name='apellidos' onChange={handleChange} />
+                                        <input type="text" id="form3Example2cg" className="form-control form-control-lg" name='apellidos' onChange={handleChange} />
 
                                     </div>
 
