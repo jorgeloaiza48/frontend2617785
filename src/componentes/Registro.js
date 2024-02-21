@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react'
+import Swal from 'sweetalert2'
 //import { saveAs } from 'file-saver';
 
 
@@ -23,22 +24,52 @@ export default function Registro() {
     }
     const handleSubmit = (e) => {
         e.preventDefault()
+        console.log(values.nombres)
+        console.log(values.email)
+
+        let validEmail =  /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
+        if (values.nombres.length < 3) {
+            console.log("No cumple el nombre")
+            return
+        }
+        else if (values.apellidos.length < 3) {
+            console.log("NO cumple el apellido")
+            return
+        }
+        else if (!validEmail.test(values.email)){
+            console.log("Formato de correo no válido")
+            return
+        }
+        
+
         fetch('http://localhost:3001/registro-usuario', {
             method: 'POST',
-            headers: { "Content-Type": "application/json", 'Accept': 'application/json' },           
+            headers: { "Content-Type": "application/json", 'Accept': 'application/json' },
             body: JSON.stringify(values)
         })
             .then(response => {
                 if (response.status === 200) {
-                    alert("Usuario creado con éxito")
+                    // alert("Usuario creado con éxito")
+                    Swal.fire({
+                        title: "Usuario creado con éxito",
+                        icon: "success"
+                    })
                 }
                 else {
-                    alert("No fue posible crear el usuario " + response.status)
+                    //alert(" + response.status)
+                    Swal.fire({
+                        title: "No fue posible crear el usuario ",
+                        icon: "warning"
+                    })
 
                 }
             })
             .catch((error) => {
-                alert("No fue posible finalizar el proceso de registro por un error " + error)
+                //alert("No fue posible finalizar el proceso de registro por un error " + error)
+                Swal.fire({
+                    title: "No fue posible finalizar el proceso de registro por un error ",
+                    icon: "error"
+                })
             })
 
 
@@ -63,8 +94,8 @@ export default function Registro() {
 
                                     <div className="form-outline mb-4">
 
-                                        <label className="form-label" htmlFor="form3Example1cg">Nombre</label>
-                                        <input type="text" id="form3Example1cg" className="form-control" name='nombres' onChange={handleChange} />
+                                        <label className="form-label" htmlFor="form3Example1cg" >Nombre</label>
+                                        <input type="text" id="form3Example1cg" className="form-control" name='nombres' placeholder='Nombre debe ser de mínimo tres caracteres' onChange={handleChange} />
 
                                     </div>
                                     <div className="form-outline mb-4">
@@ -75,7 +106,7 @@ export default function Registro() {
 
                                     <div className="form-outline mb-4">
                                         <label className="form-label" htmlFor="form3Example3cg">Email</label>
-                                        <input type="email" id="form3Example3cg" className="form-control form-control-lg" name='email' onChange={handleChange} />
+                                        <input type="text" id="form3Example3cg" className="form-control form-control-lg" name='email' onChange={handleChange} />
 
                                     </div>
 
