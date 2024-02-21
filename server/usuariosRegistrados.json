@@ -1,3 +1,18 @@
 [
-	
+	{
+		"id": 1,
+		"nombres": "luna",
+		"apellidos": "lunera",
+		"email": "luna@gmail.com",
+		"password": "lunera123",
+		"fecha_creación": "2024-02-21T01:32:03.792Z"
+	},
+	{
+		"id": 2,
+		"nombres": "lulo",
+		"apellidos": "naranja",
+		"email": "lulo@gmail.com",
+		"password": "lunera123456",
+		"fecha_creación": "2024-02-21T01:32:48.390Z"
+	}
 ]
