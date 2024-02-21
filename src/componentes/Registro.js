@@ -5,8 +5,6 @@ import React, { useState } from 'react'
 
 export default function Registro() {
 
-
-
     const [values, setValues] = useState({
         nombres: "",
         apellidos: "",
@@ -14,7 +12,7 @@ export default function Registro() {
         password: ""
 
     })
-    const handleChange = (e) => {
+    const handleChange = (e) => { //cuando se cambie de Input entonces se guarda la información en la variables.
 
         const { name, value } = e.target
         const newValues = {
