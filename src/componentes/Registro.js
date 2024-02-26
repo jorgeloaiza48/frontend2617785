@@ -25,7 +25,7 @@ export default function Registro() {
         e.preventDefault()
         fetch('http://localhost:3001/registro-usuario', {
             method: 'POST',
-            headers: { "Content-Type": "application/json", 'Accept': 'application/json' },           
+            headers: { "Content-Type": "application/json", 'Accept': 'application/json' },
             body: JSON.stringify(values)
         })
             .then(response => {
