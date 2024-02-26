@@ -1,14 +1,25 @@
 
 import React, { useState } from 'react'
-//import { saveAs } from 'file-saver';
+import Swal from 'sweetalert2'
+import './Registro.css'
+
+
 
 
 export default function Registro() {
 
+    const [identificacionError, setIdentificacionError] = useState(false)
+    function idError(){ //Esta función setea a false la variable "identificacionError" para que el mensaje de error desaparezca cuando hacen click en el campo de la identificación.
+        setIdentificacionError(false)
+    }
+
     const [values, setValues] = useState({
+        identificacion: "",
         nombres: "",
         apellidos: "",
         email: "",
+        direccion: "",
+        telefono: "",
         password: ""
 
     })
@@ -23,6 +34,41 @@ export default function Registro() {
     }
     const handleSubmit = (e) => {
         e.preventDefault()
+
+        let validPassword = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/  //Expersión regular para: Mínimo 8 caracteres de longitud. Almenos una letra mayúscula. Almenos una letra minúscula. Almenos un número. Almenos un caracter especial. https://uibakery.io/regex-library/password
+        let validEmail = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/; //Expresión regular para validar email, es decir, que el email ingresado tenga el formato correcto de una dirección de correo electrónico
+
+        if (values.identificacion.length < 5 || values.identificacion.length > 10 || values.identificacion.length === 0) {
+            console.log("La identificación debe estar entre 5 y 10 números")
+            setIdentificacionError(true)
+            return
+        }
+        else if (values.nombres.length < 3 || values.nombres.length === 0 || !values.nombres.trim()) { //El método trim( ) elimina los espacios en blanco en ambos extremos del string.        
+            console.log("No cumple con los requisitos mínimos para el nombre. Deber ser mínimo de tres caracteres.")
+            return
+        }
+        else if (values.apellidos.length < 3 || values.apellidos.length === 0 || !values.apellidos.trim()) {
+            console.log("NO cumple con los requisitos mínimos para el apellido apellido")
+            return
+        }
+        else if (!validEmail.test(values.email)) {
+            console.log("Formato de correo no válido")
+            return
+        }
+        else if (values.direccion.length < 15) {
+            console.log("Dirección deber ser mínimo de 15 caracteres")
+            return
+        }
+        else if (values.telefono.length < 10 || values.telefono.length > 10) {
+            console.log("El teléfono debe ser de diez dígitos")
+            return
+        }
+        else if (!validPassword.test(values.password)) {
+            console.log("Contraseña no cumple con los requerimientos mínimos.")
+            return
+        }
+
+
         fetch('http://localhost:3001/registro-usuario', {
             method: 'POST',
             headers: { "Content-Type": "application/json", 'Accept': 'application/json' },
@@ -30,15 +76,27 @@ export default function Registro() {
         })
             .then(response => {
                 if (response.status === 200) {
-                    alert("Usuario creado con éxito")
+                    // alert("Usuario creado con éxito")
+                    Swal.fire({
+                        title: "Usuario creado con éxito",
+                        icon: "success"
+                    })
                 }
                 else {
-                    alert("No fue posible crear el usuario " + response.status)
+                    //alert(" + response.status)
+                    Swal.fire({
+                        title: "No fue posible crear el usuario ",
+                        icon: "warning"
+                    })
 
                 }
             })
             .catch((error) => {
-                alert("No fue posible finalizar el proceso de registro por un error " + error)
+                //alert("No fue posible finalizar el proceso de registro por un error " + error)
+                Swal.fire({
+                    title: "No fue posible finalizar el proceso de registro por un error ",
+                    icon: "error"
+                })
             })
 
 
@@ -63,25 +121,47 @@ export default function Registro() {
 
                                     <div className="form-outline mb-4">
 
-                                        <label className="form-label" htmlFor="form3Example1cg">Nombre</label>
-                                        <input type="text" id="form3Example1cg" className="form-control" name='nombres' onChange={handleChange} />
+                                        <label className="form-label" htmlFor="form3Example1cg" >Identificación</label>
+                                        <input type="number" id="form3Example0cg" className="form-control" name='identificacion' placeholder='Deber estar entre 5 y 10 dígitos' onChange={handleChange} onClick={idError} />
+                                        {identificacionError ? <p>La identificación debe estar entre 5 y diez números</p> : ""}
 
                                     </div>
+
+                                    <div className="form-outline mb-4">
+
+                                        <label className="form-label" htmlFor="form3Example1cg" >Nombre</label>
+                                        <input type="text" id="form3Example1cg" className="form-control" name='nombres' placeholder='Debe ser de mínimo tres caracteres' onChange={handleChange} />
+
+                                    </div>
+
                                     <div className="form-outline mb-4">
                                         <label className="form-label" htmlFor="form3Example1cg">Apellido</label>
-                                        <input type="text" id="form3Example2cg" className="form-control form-control-lg" name='apellidos' onChange={handleChange} />
+                                        <input type="text" id="form3Example2cg" className="form-control form-control-lg" name='apellidos' placeholder='Debe ser de mínimo tres caracteres' onChange={handleChange} />
 
                                     </div>
 
                                     <div className="form-outline mb-4">
                                         <label className="form-label" htmlFor="form3Example3cg">Email</label>
-                                        <input type="email" id="form3Example3cg" className="form-control form-control-lg" name='email' onChange={handleChange} />
+                                        <input type="text" id="form3Example3cg" className="form-control form-control-lg" name='email' placeholder='Debe ser un formato válido. Ejemplo: alguien@gmail.com' onChange={handleChange} />
 
                                     </div>
 
                                     <div className="form-outline mb-4">
+                                        <label className="form-label" htmlFor="form3Example3cg">Dirección</label>
+                                        <input type="text" id="form3Example4cg" className="form-control form-control-lg" name='direccion' placeholder='Debe ser de mínimo qince caracteres' onChange={handleChange} />
+
+                                    </div>
+
+                                    <div className="form-outline mb-4">
+                                        <label className="form-label" htmlFor="form3Example3cg">Teléfono</label>
+                                        <input type="number" id="form3Example5cg" className="form-control form-control-lg" name='telefono' placeholder='Debe ser de mínimo diez números' onChange={handleChange} />
+
+                                    </div>
+
+
+                                    <div className="form-outline mb-4">
                                         <label className="form-label" htmlFor="form3Example4cg">Password</label>
-                                        <input type="password" id="form3Example4cg" className="form-control form-control-lg" name='password' onChange={handleChange} />
+                                        <input type="password" id="form3Example6cg" className="form-control form-control-lg" name='password' onChange={handleChange} />
 
                                     </div>
 

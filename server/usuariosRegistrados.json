@@ -1,34 +1,12 @@
 [
-	{
-		"id": 1,
-		"nombres": "luna",
-		"apellidos": "lunera",
-		"email": "luna@gmail.com",
-		"password": "lunera123",
-		"fecha_creación": "2024-02-21T01:32:03.792Z"
-	},
-	{
-		"id": 2,
-		"nombres": "lulo",
-		"apellidos": "naranja",
-		"email": "lulo@gmail.com",
-		"password": "lunera123456",
-		"fecha_creación": "2024-02-21T01:32:48.390Z"
-	},
-	{
-		"id": 3,
-		"nombres": "jacobo",
-		"apellidos": "riz",
-		"email": "jacobo@gmail.com",
-		"password": "jacobo123",
-		"fecha_creación": "2024-02-21T01:52:21.104Z"
-	},
-	{
-		"id": 4,
-		"nombres": "lina",
-		"apellidos": "mesa",
-		"email": "lina@gmail.com",
-		"password": "lina123",
-		"fecha_creación": "2024-02-21T01:53:59.575Z"
-	}
+    {
+        "id": 1,
+        "nombres": "fgfgdfgfd",
+        "apellidos": "fgfdgfd",
+        "email": "masa@gmail.com",
+        "direccion": "fggfgfgfgfgfgfgf",
+        "telefono": "4554454545",
+        "password": "masa12345fgfD&//(",
+        "fecha_creación": "2024-02-26T13:25:54.293Z"
+    }
 ]
