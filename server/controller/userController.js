@@ -54,6 +54,13 @@ const controller = {
                 fecha_creación: new Date()
             };
 
+            for (x of users) {
+                if (x.email === req.body.email) {
+                    res.status(400).send("El email ya existe")
+                    return
+                }
+            }
+
             users.push(usuarioNuevo);
 
             // Escribir el archivo JSON

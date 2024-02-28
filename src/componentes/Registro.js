@@ -5,11 +5,10 @@ import './Registro.css'
 
 
 
-
 export default function Registro() {
 
     const [identificacionError, setIdentificacionError] = useState(false)
-    function idError(){ //Esta función setea a false la variable "identificacionError" para que el mensaje de error desaparezca cuando hacen click en el campo de la identificación.
+    function idError() { //Esta función setea a false la variable "identificacionError" para que el mensaje de error desaparezca cuando hacen click en el campo de la identificación.
         setIdentificacionError(false)
     }
 
@@ -39,32 +38,25 @@ export default function Registro() {
         let validEmail = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/; //Expresión regular para validar email, es decir, que el email ingresado tenga el formato correcto de una dirección de correo electrónico
 
         if (values.identificacion.length < 5 || values.identificacion.length > 10 || values.identificacion.length === 0) {
-            console.log("La identificación debe estar entre 5 y 10 números")
             setIdentificacionError(true)
             return
         }
         else if (values.nombres.length < 3 || values.nombres.length === 0 || !values.nombres.trim()) { //El método trim( ) elimina los espacios en blanco en ambos extremos del string.        
-            console.log("No cumple con los requisitos mínimos para el nombre. Deber ser mínimo de tres caracteres.")
             return
         }
         else if (values.apellidos.length < 3 || values.apellidos.length === 0 || !values.apellidos.trim()) {
-            console.log("NO cumple con los requisitos mínimos para el apellido apellido")
             return
         }
         else if (!validEmail.test(values.email)) {
-            console.log("Formato de correo no válido")
             return
         }
         else if (values.direccion.length < 15) {
-            console.log("Dirección deber ser mínimo de 15 caracteres")
             return
         }
         else if (values.telefono.length < 10 || values.telefono.length > 10) {
-            console.log("El teléfono debe ser de diez dígitos")
             return
         }
         else if (!validPassword.test(values.password)) {
-            console.log("Contraseña no cumple con los requerimientos mínimos.")
             return
         }
 
@@ -82,10 +74,10 @@ export default function Registro() {
                         icon: "success"
                     })
                 }
-                else {
+                if(response.status === 400) {
                     //alert(" + response.status)
                     Swal.fire({
-                        title: "No fue posible crear el usuario ",
+                        title: "No fue posible crear el usuario porque ya existe el correo ingresado " + values.email,
                         icon: "warning"
                     })
 
@@ -94,7 +86,7 @@ export default function Registro() {
             .catch((error) => {
                 //alert("No fue posible finalizar el proceso de registro por un error " + error)
                 Swal.fire({
-                    title: "No fue posible finalizar el proceso de registro por un error ",
+                    title: "No fue posible finalizar el proceso de registro por un error interno del servidor ",
                     icon: "error"
                 })
             })
