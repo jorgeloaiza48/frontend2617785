@@ -18,5 +18,45 @@
         "telefono": "2121212121",
         "password": "dfdsfHH6778%&&",
         "fecha_creación": "2024-02-28T20:02:19.855Z"
+    },
+    {
+        "id": 3,
+        "nombres": "dfdsf",
+        "apellidos": "gfgfg",
+        "email": "",
+        "direccion": "",
+        "telefono": "",
+        "password": "",
+        "fecha_creación": "2024-03-05T01:42:10.980Z"
+    },
+    {
+        "id": 4,
+        "nombres": "hgfhfgh",
+        "apellidos": "ghgfhgf",
+        "email": "jelm48@misena.edu.co",
+        "direccion": "gghghghhgghghghhghg",
+        "telefono": "5656565656",
+        "password": "asdFR45\"#$",
+        "fecha_creación": "2024-03-05T02:17:08.844Z"
+    },
+    {
+        "id": 5,
+        "nombres": "gfgfdgdf",
+        "apellidos": "ghfghgf",
+        "email": "cucarron@hotmail.com",
+        "direccion": "fgdfgdfgdfgfggfdfgfg",
+        "telefono": "6556565656",
+        "password": "Abc123\"#$",
+        "fecha_creación": "2024-03-05T02:44:38.052Z"
+    },
+    {
+        "id": 6,
+        "nombres": "gfgfdgdf",
+        "apellidos": "ghfghgf",
+        "email": "cucarron@hotmail.com.co",
+        "direccion": "fgdfgdfgdfgfggfdfgfg",
+        "telefono": "6556565656",
+        "password": "Abc123\"#$",
+        "fecha_creación": "2024-03-05T02:45:52.368Z"
     }
 ]
