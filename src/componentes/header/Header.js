@@ -64,7 +64,7 @@ function Header() {
                         <li className="nav-item">
                             <GroupsIcon />
                             <a className="nav-link" href="#">
-                                Ver usuarios Registrados
+                                Ver usuarios
                             </a>
                         </li>
                         </Link>
