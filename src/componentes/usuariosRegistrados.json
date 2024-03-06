@@ -1,0 +1,102 @@
+[
+    {
+        "id": 1,
+        "nombres": "juan",
+        "apellidos": "lopez",
+        "email": "juanchito@gmail.com",
+        "direccion": "mz 4 casa 15 cuba 3",
+        "telefono": "1234567890",
+        "password": "Abc123\"#$",
+        "fecha_creación": "2024-03-05T02:50:12.366Z"
+    },
+    {
+        "id": 2,
+        "nombres": "pepito",
+        "apellidos": "pérez",
+        "email": "pepito@gmail.com",
+        "direccion": "casa 34 call45 transversal",
+        "telefono": "1234567890",
+        "password": "Abc123\"#$",
+        "fecha_creación": "2024-03-05T02:52:20.606Z"
+    },
+    {
+        "id": 3,
+        "nombres": "juan",
+        "apellidos": "lopez",
+        "email": "juan@gmail.com",
+        "direccion": "mz 4 cs 45 fdffdfdfd",
+        "telefono": "1234569874",
+        "password": "Abc1234\"#$",
+        "fecha_creación": "2024-03-06T00:36:43.356Z"
+    },
+    {
+        "id": 4,
+        "nombres": "juanchito",
+        "apellidos": "Lozanito",
+        "email": "juanchito123@gmail.com",
+        "direccion": "fghytfredwsaqws",
+        "telefono": "1234567890",
+        "password": "Abc1234\"#$",
+        "fecha_creación": "2024-03-06T02:11:12.501Z"
+    },
+    {
+        "id": 5,
+        "nombres": "blanca",
+        "apellidos": "nieves",
+        "email": "blanquita@gmail.com",
+        "direccion": "mz 4 casa 15 cuba 3",
+        "telefono": "1111122223",
+        "password": "Abc1234\"#$",
+        "fecha_creación": "2024-03-06T02:14:22.215Z"
+    },
+    {
+        "id": 6,
+        "nombres": "Judas",
+        "apellidos": "Tadeo",
+        "email": "juditas@gmail.com",
+        "direccion": "calle Belén ejos Israel",
+        "telefono": "1265986532",
+        "password": "Abc1234\"#$",
+        "fecha_creación": "2024-03-06T02:18:54.188Z"
+    },
+    {
+        "id": 7,
+        "nombres": "Judas",
+        "apellidos": "Tadeo",
+        "email": "tas@gmail.com",
+        "direccion": "calle Belén ejos Israel",
+        "telefono": "1265986532",
+        "password": "Abc1234\"#$",
+        "fecha_creación": "2024-03-06T02:20:02.799Z"
+    },
+    {
+        "id": 8,
+        "nombres": "Judas",
+        "apellidos": "Tadeo",
+        "email": "gatas@gmail.com",
+        "direccion": "calle Belén ejos Israel",
+        "telefono": "1265986532",
+        "password": "Abc1234\"#$",
+        "fecha_creación": "2024-03-06T02:20:45.004Z"
+    },
+    {
+        "id": 9,
+        "nombres": "Aquiles",
+        "apellidos": "Voy",
+        "email": "aguiles@gmail.com",
+        "direccion": "calle troya en Grecia",
+        "telefono": "1236985200",
+        "password": "Abc1234!\"#$",
+        "fecha_creación": "2024-03-06T02:22:22.015Z"
+    },
+    {
+        "id": 10,
+        "nombres": "Aquiles",
+        "apellidos": "Voy",
+        "email": "aguilesvoyllegando@gmail.com",
+        "direccion": "calle troya en Grecia",
+        "telefono": "1236985200",
+        "password": "Abc1234!\"#$",
+        "fecha_creación": "2024-03-06T02:26:01.223Z"
+    }
+]

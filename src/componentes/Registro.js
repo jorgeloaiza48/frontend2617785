@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import Swal from 'sweetalert2'
 import './Registro.css'
 
@@ -18,6 +18,8 @@ export default function Registro() {
     const [passwordError, setPasswordError] = useState(false)
     const [passwordErrorRepeat,setPasswordErrorRepeat] = useState(false)
     const [passComparacion, setPassComparacion] = useState(false)
+
+    const form = useRef()
 
     function idError() { //Esta función setea a false la variable "identificacionError" para que el mensaje de error desaparezca cuando hacen click en el campo de la identificación.
         setIdentificacionError(false)
@@ -128,6 +130,8 @@ export default function Registro() {
                         title: "Usuario creado con éxito",
                         icon: "success"
                     })
+                    form.current.reset()
+                
                 }
                 if (response.status === 400) {
                     //alert(" + response.status)
@@ -153,7 +157,7 @@ export default function Registro() {
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} ref={form}>
 
                 <section className="vh-100 bg-image" >
 
@@ -205,7 +209,7 @@ export default function Registro() {
 
                                     <div className="form-outline mb-4">
                                         <label className="form-label" htmlFor="form3Example3cg">Teléfono</label>
-                                        <input type="number" id="form3Example5cg" className="form-control form-control-lg" name='telefono' placeholder='Debe ser de mínimo diez números' onChange={handleChange} onClick={telError} />
+                                        <input type="number" id="form3Example5cg" className="form-control form-control-lg" name='telefono' placeholder='Debe ser de diez números' onChange={handleChange} onClick={telError} />
                                         {telefonoError ? <p>El teléfono debe ser de 10 números</p> : ""}
                                     </div>
 

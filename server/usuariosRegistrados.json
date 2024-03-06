@@ -1,62 +1,33 @@
-[
+  [
     {
         "id": 1,
-        "nombres": "fgfgdfgfd",
-        "apellidos": "fgfdgfd",
-        "email": "masa@gmail.com",
-        "direccion": "fggfgfgfgfgfgfgf",
-        "telefono": "4554454545",
-        "password": "masa12345fgfD&//(",
-        "fecha_creación": "2024-02-26T13:25:54.293Z"
+        "nombres": "juan",
+        "apellidos": "lopez",
+        "email": "juanchito@gmail.com",
+        "direccion": "mz 4 casa 15 cuba 3",
+        "telefono": "1234567890",
+        "password": "Abc123\"#$",
+        "fecha_creación": "2024-03-05T02:50:12.366Z"
     },
     {
         "id": 2,
-        "nombres": "rtrtret",
-        "apellidos": "fgfdgfdg",
-        "email": "carla@gmail.com",
-        "direccion": "gfhgfhfghfghfgh",
-        "telefono": "2121212121",
-        "password": "dfdsfHH6778%&&",
-        "fecha_creación": "2024-02-28T20:02:19.855Z"
+        "nombres": "pepito",
+        "apellidos": "pérez",
+        "email": "pepito@gmail.com",
+        "direccion": "casa 34 call45 transversal",
+        "telefono": "1234567890",
+        "password": "Abc123\"#$",
+        "fecha_creación": "2024-03-05T02:52:20.606Z"
     },
     {
         "id": 3,
-        "nombres": "dfdsf",
-        "apellidos": "gfgfg",
-        "email": "",
-        "direccion": "",
-        "telefono": "",
-        "password": "",
-        "fecha_creación": "2024-03-05T01:42:10.980Z"
-    },
-    {
-        "id": 4,
-        "nombres": "hgfhfgh",
-        "apellidos": "ghgfhgf",
-        "email": "jelm48@misena.edu.co",
-        "direccion": "gghghghhgghghghhghg",
-        "telefono": "5656565656",
-        "password": "asdFR45\"#$",
-        "fecha_creación": "2024-03-05T02:17:08.844Z"
-    },
-    {
-        "id": 5,
-        "nombres": "gfgfdgdf",
-        "apellidos": "ghfghgf",
-        "email": "cucarron@hotmail.com",
-        "direccion": "fgdfgdfgdfgfggfdfgfg",
-        "telefono": "6556565656",
-        "password": "Abc123\"#$",
-        "fecha_creación": "2024-03-05T02:44:38.052Z"
-    },
-    {
-        "id": 6,
-        "nombres": "gfgfdgdf",
-        "apellidos": "ghfghgf",
-        "email": "cucarron@hotmail.com.co",
-        "direccion": "fgdfgdfgdfgfggfdfgfg",
-        "telefono": "6556565656",
-        "password": "Abc123\"#$",
-        "fecha_creación": "2024-03-05T02:45:52.368Z"
+        "nombres": "juan",
+        "apellidos": "lopez",
+        "email": "juan@gmail.com",
+        "direccion": "mz 4 cs 45 fdffdfdfd",
+        "telefono": "1234569874",
+        "password": "Abc1234\"#$",
+        "fecha_creación": "2024-03-06T00:36:43.356Z"
     }
 ]
+
