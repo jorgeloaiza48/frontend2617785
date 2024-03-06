@@ -33,7 +33,6 @@
 const fs = require('fs').promises;
 const path = require('path');
 
-//const userFilePath = path.join(__dirname, '../usuariosRegistrados.json');
 const userFilePath = path.join(__dirname, '../../src/componentes/usuariosRegistrados.json');
 
 const controller = {
@@ -46,12 +45,14 @@ const controller = {
             const ultimo = users.length;
             const usuarioNuevo = {
                 id: ultimo + 1,
+                identificacion: req.body.identificacion,
                 nombres: req.body.nombres,
                 apellidos: req.body.apellidos,
                 email: req.body.email,
                 direccion: req.body.direccion,
                 telefono: req.body.telefono,
                 password: req.body.password,
+                estado: "activo",
                 fecha_creación: new Date()
             };
 

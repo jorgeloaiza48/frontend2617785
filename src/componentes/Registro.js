@@ -131,6 +131,7 @@ export default function Registro() {
                         icon: "success"
                     })
                     form.current.reset()
+                    window.location.hash = '/login' 
                 
                 }
                 if (response.status === 400) {
