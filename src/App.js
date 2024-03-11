@@ -6,6 +6,7 @@ import NotFound from './componentes/NotFound';
 import Registro from './componentes/Registro';
 import UsuariosRegistrados from './componentes/UsuariosRegistrados'
 import Login from './componentes/Login';
+import Carrusel from './componentes/Carrusel/Carrusel';
 
 function App() {
 
@@ -18,6 +19,8 @@ function App() {
         <Route path="*"               element={<NotFound />} />
         <Route exact path='/usuarios-registrados' element={<UsuariosRegistrados/>}/>
         <Route exact path ='/login' element={<Login/>}/>
+        <Route exact path ='/slider' element={<Carrusel/>}/>
+
       </Routes>
     </HashRouter>
   );

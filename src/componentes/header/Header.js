@@ -14,6 +14,7 @@ import { Link } from 'react-router-dom';
 
 function Header() {
     return (
+   
         <div className='contenedor'>
             <img src="logo.jpg" className="logo" alt="logo" />
             <nav className="navbar navbar-expand-lg navbar-light bg-light">

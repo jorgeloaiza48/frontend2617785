@@ -46,5 +46,17 @@
         "password": "Abc1234\"#$",
         "estado": "activo",
         "fecha_creación": "2024-03-06T20:00:53.350Z"
+    },
+    {
+        "id": 5,
+        "identificacion": "23659",
+        "nombres": "Rey",
+        "apellidos": "Ruis",
+        "email": "rey@hotmail.com",
+        "direccion": "mz 4 casa 15 cuba 3",
+        "telefono": "2396854123",
+        "password": "Abc1234\"#$",
+        "estado": "activo",
+        "fecha_creación": "2024-03-10T16:41:01.702Z"
     }
 ]

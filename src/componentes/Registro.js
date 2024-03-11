@@ -2,6 +2,7 @@
 import React, { useRef, useState } from 'react'
 import Swal from 'sweetalert2'
 import './Registro.css'
+import { Link } from 'react-router-dom';
 
 
 
@@ -16,7 +17,7 @@ export default function Registro() {
     const [direccionError, setDireccionError] = useState(false)
     const [telefonoError, setTelefonoError] = useState(false)
     const [passwordError, setPasswordError] = useState(false)
-    const [passwordErrorRepeat,setPasswordErrorRepeat] = useState(false)
+    const [passwordErrorRepeat, setPasswordErrorRepeat] = useState(false)
     const [passComparacion, setPassComparacion] = useState(false)
 
     const form = useRef()
@@ -57,7 +58,7 @@ export default function Registro() {
         direccion: "",
         telefono: "",
         password: "",
-        passRepeat:""
+        passRepeat: ""
 
     })
     const handleChange = (e) => { //cuando se cambie de Input entonces se guarda la información en la variables.
@@ -108,12 +109,12 @@ export default function Registro() {
             setPasswordError(true)
             return
         }
-        else if(values.passRepeat.length === 0){
+        else if (values.passRepeat.length === 0) {
             setPasswordErrorRepeat(true)
             return
-        }        
+        }
         else if (values.password !== values.passRepeat) {
-            setPassComparacion(true)            
+            setPassComparacion(true)
             return
         }
 
@@ -131,8 +132,8 @@ export default function Registro() {
                         icon: "success"
                     })
                     form.current.reset()
-                    window.location.hash = '/login' 
-                
+                    window.location.hash = '/login'
+
                 }
                 if (response.status === 400) {
                     //alert(" + response.status)
@@ -223,7 +224,7 @@ export default function Registro() {
 
                                     <div className="form-outline mb-4">
                                         <label className="form-label" htmlFor="form3Example4cdg">Repeat your password</label>
-                                        <input type="password" id="form3Example4cdg" className="form-control form-control-lg" name='passRepeat' onChange={handleChange}  onClick={passRepeat} />                                        
+                                        <input type="password" id="form3Example4cdg" className="form-control form-control-lg" name='passRepeat' onChange={handleChange} onClick={passRepeat} />
                                         {passComparacion ? <p>Las contraseñas ingresadas no coinciden</p> : ""}
                                         {passwordErrorRepeat ? <p>Este campo no puede quedar vacío.</p> : ""}
 
@@ -239,9 +240,9 @@ export default function Registro() {
                                     <div className="d-flex justify-content-center">
                                         <button type='submit' className="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
                                     </div>
-
-                                    <p className="text-center text-muted mt-5 mb-0">Have already an account? <a href="#!"
-                                        className="fw-bold text-body"><u>Login here</u></a></p>
+                                   
+                                        <p className="text-center text-muted mt-5 mb-0">Have already an account? <a href="#!" className="fw-bold text-body"><u><Link to='/login'>Login here </Link></u></a></p>
+                                   
 
 
 
