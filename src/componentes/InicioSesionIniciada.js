@@ -6,6 +6,7 @@ import Carrusel from './Carrusel/Carrusel';
 import Cookie from 'js-cookie';
 import Swal from 'sweetalert2'
 import logo from './logo.png'
+import PersonSharpIcon from '@mui/icons-material/PersonSharp';
 
 function InicioSesionIniciada() {
     const cerraSesion = () => {
@@ -33,7 +34,8 @@ function InicioSesionIniciada() {
         <div>
             <h4>Bienvenido {Cookie.get('email')}</h4>
             <button onClick={cerraSesion}>Cerrar sesión</button>
-            <img  className="w-3/4" src={logo} alt='logo' />
+            {/* <img  className="w-3/4" src={logo} alt='logo' /> */}
+            <PersonSharpIcon/>
             <Header />
             <Carrusel />
             <CardList />
