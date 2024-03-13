@@ -14,7 +14,7 @@ import { Link } from 'react-router-dom';
 
 function Header() {
     return (
-   
+
         <div className='contenedor'>
             <img src="logo.jpg" className="logo" alt="logo" />
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -55,19 +55,21 @@ function Header() {
                                 </a>
                             </li>
                         </Link>
-                        <li className="nav-item">
-                            <LoginIcon />
-                            <a className="nav-link" href="#">
-                                Iniciar sesión
-                            </a>
-                        </li>
+                        <Link to='/login'>
+                            <li className="nav-item">
+                                <LoginIcon />
+                                <a className="nav-link" href="#">
+                                    Iniciar sesión
+                                </a>
+                            </li>
+                        </Link>
                         <Link to='/usuarios-registrados'>
-                        <li className="nav-item">
-                            <GroupsIcon />
-                            <a className="nav-link" href="#">
-                                Ver usuarios
-                            </a>
-                        </li>
+                            <li className="nav-item">
+                                <GroupsIcon />
+                                <a className="nav-link" href="#">
+                                    Ver usuarios
+                                </a>
+                            </li>
                         </Link>
                     </ul>
                 </div>

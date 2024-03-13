@@ -7,7 +7,7 @@
         "email": "pepito@gmail.com",
         "direccion": "calle 8 cra 23 barrio los pinos",
         "telefono": "3232323232",
-        "password": "Abc1234\"#$",
+        "password": "Abc1234#$",
         "estado": "activo",
         "fecha_creación": "2024-03-06T19:25:30.038Z"
     },
@@ -19,7 +19,7 @@
         "email": "luisito@gmail.com",
         "direccion": "calle 8 cra 23 barrio los pinos",
         "telefono": "1236447989",
-        "password": "Abc1234\"#$",
+        "password": "Abc1234#$",
         "estado": "activo",
         "fecha_creación": "2024-03-06T19:38:33.634Z"
     },
@@ -31,7 +31,7 @@
         "email": "armando@gmail.com",
         "direccion": "calle 8 cra 23 barrio los pinos",
         "telefono": "2121212121",
-        "password": "Abc1234\"#$",
+        "password": "Abc1234#$",
         "estado": "activo",
         "fecha_creación": "2024-03-06T19:47:10.314Z"
     },
@@ -43,7 +43,7 @@
         "email": "luciana@gmail.com",
         "direccion": "calle 8 cra 23 barrio los pinos",
         "telefono": "3232323231",
-        "password": "Abc1234\"#$",
+        "password": "Abc1234#$",
         "estado": "activo",
         "fecha_creación": "2024-03-06T20:00:53.350Z"
     },
@@ -55,7 +55,7 @@
         "email": "rey@hotmail.com",
         "direccion": "mz 4 casa 15 cuba 3",
         "telefono": "2396854123",
-        "password": "Abc1234\"#$",
+        "password": "Abc1234#$",
         "estado": "activo",
         "fecha_creación": "2024-03-10T16:41:01.702Z"
     }
