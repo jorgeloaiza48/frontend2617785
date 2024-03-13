@@ -90,7 +90,7 @@ const controller = {
         }
 
         catch (error) {
-            console.error('Error al procesar el registro:', error);
+            console.error('Error al procesar el registro:', error)
             res.status(500).send('Error interno del servidor');
         }
     }

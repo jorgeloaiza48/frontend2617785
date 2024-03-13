@@ -5,22 +5,15 @@ import monton from './monton.jpg'
 
 export default [
     {   id:1,
-        image: monton
+        image: cerebroBroca
     },
     {   id:2,        
-        image: monton
+        image: cienAños
     },
     {   id:3,        
-        image: monton
+        image: coronel
     },
     {   id:4,
         image: monton
-    },
-    {   id:5,        
-        image: monton
-    },
-    {   id:6,        
-        image: monton
     }
-
-]
+   ]

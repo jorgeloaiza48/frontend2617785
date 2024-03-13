@@ -1,50 +1,80 @@
 import React from 'react'
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
-import imagenesCarrusel from './imagenesCarrusel';
-//import './carrusel.css'
+//import "slick-carousel/slick/slick.css";
+//import "slick-carousel/slick/slick-theme.css";
+//import Slider from "react-slick";
+//import imagenesCarrusel from './imagenesCarrusel';
+import imagen from './imagen1.jpg'
+import imagen2 from './imagen2.jpg'
+import imagen3 from './imagen3.jpg'
+import './carrusel.css'
 
-//import { Carousel } from 'react-bootstrap';
-//import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 function Carrusel() {
-    let settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3, //Muestra la cantidad de imágenes de una vez
-        slidesToScroll: 1
-    };
+    // let settings = {
+    //     dots: true,
+    //     infinite: true,
+    //     speed: 500,
+    //     slidesToShow: 3, //Muestra la cantidad de imágenes de una vez
+    //     slidesToScroll: 1
+    // };
     return (
-        <div className='container-fluid border'>
 
-            <Slider {...settings}>
 
+        /* <Slider {...settings}>
+            {imagenesCarrusel.map(items => {
+                return (
+                    <div key={items.id}  >
+                        <img src={items.image} alt='Imagen' />
+                    </div>
+                )
+            })}
+        </Slider> */
+
+        /*  return (
+        <Carousel interval={500}>
+            <Carousel.Item>
                 {imagenesCarrusel.map(items => {
-                    return (
-                        <div key={items.id}  >
-                            <img src={items.image} alt='Imagen' />
-                        </div>
-                    )
+                    return (<img classNameNameName='imgCarrusel' src={items.image} alt='Imagen'/>)
                 })}
+            </Carousel.Item>
+        </Carousel>
+    ) */
 
-            </Slider>
+        <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel" >
+            <div className="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div className="carousel-inner bg-secondary">
+                <div className="carousel-item active" data-bs-interval="1000">
+                    <img src={imagen} className="d-block w-100" alt="..." />
+                </div>
+                <div className="carousel-item">
+                    <img src={imagen2} className="d-block w-100" alt="..." />
+                </div>
+                <div className="carousel-item" >
+                    <img src={imagen3} className="d-block w-100" alt="..." />
+                </div>
+            </div>
+            <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span className="visually-hidden">Previous</span>
+            </button>
+            <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                <span className="visually-hidden">Next</span>
+            </button>
         </div>
 
 
 
+
+
     )
-    /*  return (
-         <Carousel interval={500}>
-             <Carousel.Item>
-                 {imagenesCarrusel.map(items => {
-                     return (<img className='imgCarrusel' src={items.image} alt='Imagen'/>)
-                 })}
-             </Carousel.Item>
-         </Carousel>
-     ) */
+
 
 }
 
