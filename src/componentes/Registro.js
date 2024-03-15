@@ -59,7 +59,6 @@ export default function Registro() {
         telefono: "",
         password: "",
         passRepeat: ""
-
     })
     const handleChange = (e) => { //cuando se cambie de Input entonces se guarda la información en la variables.
 
