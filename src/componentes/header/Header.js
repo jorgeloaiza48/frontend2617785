@@ -8,7 +8,6 @@ import ConnectWithoutContactOutlinedIcon from '@mui/icons-material/ConnectWithou
 import HowToRegOutlinedIcon from '@mui/icons-material/HowToRegOutlined';
 import SearchTwoToneIcon from '@mui/icons-material/SearchTwoTone';
 import LoginIcon from '@mui/icons-material/Login';
-import GroupsIcon from '@mui/icons-material/Groups';
 import { Link } from 'react-router-dom';
 
 
@@ -62,15 +61,7 @@ function Header() {
                                     Iniciar sesión
                                 </a>
                             </li>
-                        </Link>
-                        <Link to='/usuarios-registrados'>
-                            <li className="nav-item">
-                                <GroupsIcon />
-                                <a className="nav-link" href="#">
-                                    Ver usuarios
-                                </a>
-                            </li>
-                        </Link>
+                        </Link>                        
                     </ul>
                 </div>
             </nav>

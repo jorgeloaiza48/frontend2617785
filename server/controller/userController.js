@@ -53,7 +53,7 @@ const controller = {
                 telefono: req.body.telefono,
                 password: req.body.password,
                 estado: "activo",
-                rol: "usuario",
+                rol: "Usuario",
                 fecha_creación: new Date()
             };
 
@@ -82,7 +82,7 @@ const controller = {
             const users = JSON.parse(usersData);
 
             for (x of users) {
-                if (x.email === req.body.email && x.password === req.body.password) {
+                if (x.email === req.body.email && x.password === req.body.password && x.rol === req.body.rol) {
                     res.status(200).send("Ok")
                     return
                 }

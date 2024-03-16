@@ -3,12 +3,13 @@ import React from 'react'
 //import "slick-carousel/slick/slick-theme.css";
 //import Slider from "react-slick";
 //import imagenesCarrusel from './imagenesCarrusel';
-import imagen from './imagen1.jpg'
-import imagen2 from './imagen2.jpg'
-import imagen3 from './imagen3.jpg'
+import imagen1 from './imagen1.jpeg'
+import imagen2 from './imagen2.jpeg'
+import imagen3 from './imagen3.jpeg'
 import imagen4 from './imagen4.jpeg'
 import imagen5 from './imagen5.jpeg'
 import imagen6 from './imagen6.jpeg'
+import imagen7 from './imagen7.jpeg'
 import './carrusel.css'
 
 
@@ -53,11 +54,12 @@ function Carrusel() {
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+
             </div>
             <div className="carousel-inner bg-secondary">
                 <div className="carousel-item active" data-bs-interval="1000">
-                    <img src={imagen} className="d-block w-100" alt="..." />
+                    <img src={imagen1} className="d-block w-100" alt="..." />
                 </div>
                 <div className="carousel-item">
                     <img src={imagen2} className="d-block w-100" alt="..." />
@@ -74,7 +76,10 @@ function Carrusel() {
                 <div className="carousel-item" >
                     <img src={imagen6} className="d-block w-100" alt="..." />
                 </div>
-               
+                <div className="carousel-item" >
+                    <img src={imagen7} className="d-block w-100" alt="..." />
+                </div>
+
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                 <span className="carousel-control-prev-icon" aria-hidden="true"></span>

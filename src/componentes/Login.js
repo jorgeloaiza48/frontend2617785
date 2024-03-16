@@ -16,14 +16,14 @@ const Login = () => {
     const [errorPassword, setErrorPassword] = useState(false)
     //const [userName, setUserName] = useState("")
     const [showPassword, setShowPassword] = useState(true)
-    
+
 
     const [values, setValues] = useState({
         rol: "",
         email: "",
         password: "",
     })
-    //Guarda en la variable newValues los valores ingresados en el formulario de sesión
+    //Guarda en la variable newValues los valores ingresados en el formulario de Inicio de sesión
     const handleChange = (e) => {
         const { name, value } = e.target
         const newValues = {
@@ -70,13 +70,21 @@ const Login = () => {
             body: JSON.stringify(values)
         })
             .then(response => {
-                if (response.status === 200) {
+                if (response.status === 200 && values.rol === "Usuario") {
                     cookies.set('email', values.email, {
                         secure: true,
                         sameSite: 'None',
                         path: '/'
                     })
                     window.location.hash = '/sesion'
+                }
+                else if (response.status === 200 && values.rol === "Administrador") {
+                    cookies.set('email', values.email, {
+                        secure: true,
+                        sameSite: 'None',
+                        path: '/'
+                    })
+                    window.location.hash = '/usuarios-registrados' //vista con los usuarios registrados
                 }
                 else {
                     console.log("sdfd", response.status)
@@ -124,7 +132,7 @@ const Login = () => {
                                                     <option>Usuario</option>
                                                 </select>
                                                 <div class="input-group-append">
-                                                    <span class="input-group-text" id="basic-addon2"><GroupIcon/></span>
+                                                    <span class="input-group-text" id="basic-addon2"><GroupIcon /></span>
                                                 </div>
                                             </div>
                                         </div>

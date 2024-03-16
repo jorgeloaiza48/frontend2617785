@@ -4,9 +4,29 @@ import React from 'react'
 import usuarios from './usuariosRegistrados.json'
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import BorderColorIcon from '@mui/icons-material/BorderColor';
+import PersonSharpIcon from '@mui/icons-material/PersonSharp';
+import LogoutIcon from '@mui/icons-material/Logout';
+import Cookie from 'js-cookie';
+import Swal from 'sweetalert2'
 
 
 function UsuariosRegistrados() {
+
+    const cerraSesion = () => {
+        Swal.fire({
+            title: "¿Está seguro que desea cerrar la sesión?",
+            icon: "question",
+            buttons: true,
+            dangerMode: true,
+            showCancelButton: true,
+        })
+            .then((result) => {
+                if (result.isConfirmed) {
+                    Cookie.remove('email', { path: "/" })
+                    window.location.hash = '/login'
+                }
+            })
+    }
     //const url = './usuariosRegistrados.json';
     //const [usuarios, setUsuarios] = useState([])
 
@@ -29,7 +49,14 @@ function UsuariosRegistrados() {
 
     return (
         <div className='container'>
-            <h2 className='text-center mt-5'>Usuarios Registrados</h2>
+            <div class="position-relative">
+                <div className='position-absolute top-0 end-0 w-10 d-flex flex-wrap justify-content-end'>
+                    <h4>Bienvenido(a) {Cookie.get('email')}(Admin)</h4>
+                    <PersonSharpIcon />
+                    <LogoutIcon onClick={cerraSesion} />
+                </div>
+            </div>
+            <h2 className='text-start mt-5'>Usuarios Registrados</h2>
             <table className='table thead-dark mt-5 shadow-lg'>
                 <thead className="table-dark">
                     <tr>
@@ -57,8 +84,8 @@ function UsuariosRegistrados() {
                                 <td>{user.telefono}</td>
                                 <td>{user.fecha_creación}</td>
                                 <td>{user.estado}</td>
-                                <td><button className='btn btn-primary btn-sm'><BorderColorIcon/></button></td>
-                                <td><button className='btn btn-danger btn-sm'><DeleteForeverIcon/></button></td>
+                                <td><button className='btn btn-primary btn-sm'><BorderColorIcon /></button></td>
+                                <td><button className='btn btn-danger btn-sm'><DeleteForeverIcon /></button></td>
                             </tr>
                         );
                     })}
