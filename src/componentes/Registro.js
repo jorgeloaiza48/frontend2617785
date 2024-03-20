@@ -3,8 +3,8 @@ import React, { useRef, useState } from 'react'
 import Swal from 'sweetalert2'
 import './Registro.css'
 import { Link } from 'react-router-dom';
-
-
+import Header from './header/Header';
+import Footer from './footer/Footer';
 
 
 export default function Registro() {
@@ -150,14 +150,12 @@ export default function Registro() {
                     icon: "error"
                 })
             })
-
-
-
     }
 
 
     return (
-        <div>
+        <div className='container'>
+            <Header />
             <form onSubmit={handleSubmit} ref={form}>
 
                 <section className="vh-100 bg-image" >
@@ -239,11 +237,8 @@ export default function Registro() {
                                     <div className="d-flex justify-content-center">
                                         <button type='submit' className="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
                                     </div>
-                                   
-                                        <p className="text-center text-muted mt-5 mb-0">Have already an account? <a href="#!" className="fw-bold text-body"><u><Link to='/login'>Login here </Link></u></a></p>
-                                   
 
-
+                                    <p className="text-center text-muted mt-5 mb-0">Have already an account? <a href="#!" className="fw-bold text-body"><u><Link to='/login'>Login here </Link></u></a></p>
 
                                 </div>
                             </div>
@@ -253,7 +248,7 @@ export default function Registro() {
 
                 </section>
             </form>
-
+            <Footer />
         </div>
     )
 }

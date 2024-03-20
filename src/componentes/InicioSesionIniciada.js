@@ -1,14 +1,18 @@
 import React, { useEffect } from 'react'
 import CardList from './body/CardList';
-import Header from './header/Header'
+//import Header from './header/Header'
 import Footer from './footer/Footer';
 import Carrusel from './Carrusel/Carrusel';
 import Cookie from 'js-cookie';
 import Swal from 'sweetalert2'
-import PersonSharpIcon from '@mui/icons-material/PersonSharp';
+//import PersonSharpIcon from '@mui/icons-material/PersonSharp';
+import LogoutIcon from '@mui/icons-material/Logout';
+import usuario from './usuario.gif'
+import './inicioSesionIniciada.css'
+import HeaderInicioSesion from './HeaderInicioSesion'
 
 function InicioSesionIniciada() {
-    const cerraSesion = () => {
+    const cerrarSesion = () => {
         Swal.fire({
             title: "¿Está seguro que desea cerrar la sesión?",
             icon: "question",
@@ -31,12 +35,14 @@ function InicioSesionIniciada() {
     })
     return (
         <div>
-            <div className='border border-primary flex w-3/4'>
-                <h4>Bienvenido(a) {Cookie.get('email')}</h4>
-                <button onClick={cerraSesion}>Cerrar sesión</button>
-                <PersonSharpIcon />
+            <div className='sesion'>
+                <div ><h4 >Bienvenido(a) {Cookie.get('email')}</h4></div>
+                {/* <PersonSharpIcon /> */}
+                <div className='imagen'><img src={usuario} alt="usuario" /></div>
+                {/* <button onClick={cerraSesion}>Cerrar sesión</button> */}
+                <div className='logout'><LogoutIcon onClick={cerrarSesion} /></div>
             </div>
-            <Header />
+            <HeaderInicioSesion />
             <Carrusel />
             <CardList />
             <Footer />

@@ -1,13 +1,13 @@
 import React from 'react'
-import './header.css'
+import './header/header.css'
 import HomeIcon from '@mui/icons-material/Home';
 import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
 import NotesIcon from '@mui/icons-material/Notes';
 import CleanHandsOutlinedIcon from '@mui/icons-material/CleanHandsOutlined';
 import ConnectWithoutContactOutlinedIcon from '@mui/icons-material/ConnectWithoutContactOutlined';
-import HowToRegOutlinedIcon from '@mui/icons-material/HowToRegOutlined';
+//import HowToRegOutlinedIcon from '@mui/icons-material/HowToRegOutlined';
 import SearchTwoToneIcon from '@mui/icons-material/SearchTwoTone';
-import LoginIcon from '@mui/icons-material/Login';
+//import LoginIcon from '@mui/icons-material/Login';
 import { Link } from 'react-router-dom';
 
 
@@ -45,23 +45,7 @@ function Header() {
                             <a className="nav-link" href="#">
                                 Contacto
                             </a>
-                        </li>
-                        <Link to='/registro'>
-                            <li className="nav-item" id='regis'>
-                                <HowToRegOutlinedIcon />
-                                <a className="nav-link" href="#">
-                                    Registrase
-                                </a>
-                            </li>
-                        </Link>
-                        <Link to='/login'>
-                            <li className="nav-item">
-                                <LoginIcon />
-                                <a className="nav-link" href="#">
-                                    Iniciar sesión
-                                </a>
-                            </li>
-                        </Link>                        
+                        </li>                                                               
                     </ul>
                 </div>
             </nav>
