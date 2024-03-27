@@ -60,7 +60,7 @@ function UsuariosRegistrados() {
             <table className='table thead-dark mt-5 shadow-lg'>
                 <thead className="table-dark">
                     <tr>
-                        <th scope="col">Identificación</th>
+                        <th scope="col">Identificación</th>al
                         <th scope="col">Nombre</th>
                         <th scope="col">Apellido</th>
                         <th scope="col">Email</th>

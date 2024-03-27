@@ -23,6 +23,7 @@ function InicioSesionIniciada() {
             .then((result) => {
                 if (result.isConfirmed) {
                     Cookie.remove('email', { path: "/" })
+                    Cookie.remove('nombre', { path: "/" })
                     window.location.hash = '/login'
                 }
             })
@@ -36,7 +37,9 @@ function InicioSesionIniciada() {
     return (
         <div>
             <div className='sesion'>
-                <div ><h4 >Bienvenido(a) {Cookie.get('email')}</h4></div>
+                <div >
+                    <h5>Bienvenido(a)</h5>{Cookie.get('nombre')} <br/>({Cookie.get('email')})
+                </div>
                 {/* <PersonSharpIcon /> */}
                 <div className='imagen'><img src={usuario} alt="usuario" /></div>
                 {/* <button onClick={cerraSesion}>Cerrar sesión</button> */}

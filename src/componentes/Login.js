@@ -9,6 +9,11 @@ import Footer from './footer/Footer';
 import Cookies from 'universal-cookie' //https://www.npmjs.com/package/universal-cookie
 import Swal from 'sweetalert2';
 
+
+import { GoogleOAuthProvider } from '@react-oauth/google';
+import { GoogleLogin } from '@react-oauth/google';
+import { jwtDecode } from "jwt-decode";
+
 const Login = () => {
 
     const cookies = new Cookies()
@@ -76,7 +81,7 @@ const Login = () => {
                         sameSite: 'None',
                         path: '/'
                     })
-                    window.location.hash = '/sesion'
+                    window.location.hash = '/sesion' //Vista para los usuarios logueados con el rol de "usuario"
                 }
                 else if (response.status === 200 && values.rol === "Administrador") {
                     cookies.set('email', values.email, {
@@ -176,12 +181,40 @@ const Login = () => {
 
                                         <hr className="my-20" /> {/* Crea una línea horizontal */}
 
-                                        <div class="d-grid gap-2 col-15 mx-auto">
+                                        {/*<div class="d-grid gap-2 col-15 mx-auto">
                                             <button className="btn btn-lg btn-block btn-primary bg-danger"
                                                 type="submit"><GoogleIcon />  Sign in with google</button>
                                             <button className="btn btn-lg btn-block btn-primary mb-2 bg-primary"
                                                 type="submit"><FacebookIcon /> Sign in with facebook</button>
-                                        </div>
+                                        </div>*/}
+
+                                        <GoogleOAuthProvider clientId='301730232436-4j505s60f0sku73muklt178q00qeljjp.apps.googleusercontent.com'>
+                                            <GoogleLogin
+                                                onSuccess={credentialResponse => {
+                                                    console.log(credentialResponse)
+                                                    console.log("Esto es credentialResponse.credential sin decodificar ", credentialResponse.credential)
+                                                    const credentialResponseDecode = jwtDecode(credentialResponse.credential)
+                                                    console.log("Esto es credentialResponse decodificado ", credentialResponseDecode)
+                                                    console.log(credentialResponseDecode.email, credentialResponseDecode.name, credentialResponseDecode)
+                                                    cookies.set('email', credentialResponseDecode.email, {
+                                                        secure: true,
+                                                        sameSite: 'None',
+                                                        path: '/'
+                                                    })
+                                                    cookies.set('nombre', credentialResponseDecode.name, {
+                                                        secure: true,
+                                                        sameSite: 'None',
+                                                        path: '/'
+                                                    })
+                                                    window.location.hash = '/sesion'
+
+                                                }}
+                                                onError={() => {
+                                                    console.log('Login Failed');
+                                                }}
+                                            />
+                                        </GoogleOAuthProvider>
+
                                     </div>
                                 </div>
                             </div>

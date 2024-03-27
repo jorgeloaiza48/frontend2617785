@@ -24,5 +24,18 @@
         "estado": "activo",
         "rol": "Administrador",
         "fecha_creación": "2024-03-16T20:15:30.521Z"
+    },
+    {
+        "id": 3,
+        "identificacion": "3233695",
+        "nombres": "Plutarco",
+        "apellidos": "reyes",
+        "email": "plutarco@gmail.com",
+        "direccion": "mz 4 casa 15 cuba 3",
+        "telefono": "2332659854",
+        "password": "Abc1234#$",
+        "estado": "activo",
+        "rol": "Usuario",
+        "fecha_creación": "2024-03-27T20:27:44.627Z"
     }
 ]

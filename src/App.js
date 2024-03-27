@@ -22,7 +22,7 @@ function App() {
         <Route exact path='/usuarios-registrados' element={<UsuariosRegistrados/>}/>
         <Route exact path ='/login' element={<Login/>}/>
         <Route exact path ='/slider' element={<Carrusel/>}/>
-        <Route exact path = '/sesion' element={<InicioSesionIniciada/>}/>
+        <Route exact path = '/sesion' element={<InicioSesionIniciada/>}/>        
       </Routes>
     </HashRouter>
   );
